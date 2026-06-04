@@ -56,4 +56,9 @@ jQuery(document).ready(function($) {
     var referenceValue = "<?php echo esc_js(get_field('reference')); ?>";
     
     // Utiliser une classe spécifique pour cibler uniquement le formulaire Fluent Form
-    var inputRefPhoto = document.querySelector('.fluentform .ff-el-input
+    var inputRefPhoto = document.querySelector('.fluentform .ff-el-input'); 
+    if (inputRefPhoto) {
+        inputRefPhoto.value = referenceValue;
+    }
+});
+</script>
