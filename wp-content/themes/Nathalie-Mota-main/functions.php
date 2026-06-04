@@ -105,3 +105,10 @@ add_filter('the_content', 'add_lazy_loading_to_images');
 add_filter('post_thumbnail_html', 'add_lazy_loading_to_images');
 add_filter('get_avatar', 'add_lazy_loading_to_images');
 add_filter('widget_text', 'add_lazy_loading_to_images');
+
+
+// Force le shortcode [fluentform] à afficher Contact Form 7
+add_shortcode('fluentform', function($atts) {
+    // Remplacer 123 par l'ID RÉEL de votre formulaire Contact Form 7
+    return do_shortcode('[contact-form-7 id="c080104" title="Formulaire de contact"]');
+});
