@@ -41,6 +41,7 @@
             } else {
                 $shortcode_with_reference = '[fluentform id="3"]';
             }
+        
 
             // Afficher le formulaire en utilisant le shortcode avec la référence
             echo do_shortcode($shortcode_with_reference);
@@ -56,7 +57,7 @@ jQuery(document).ready(function($) {
     var referenceValue = "<?php echo esc_js(get_field('reference')); ?>";
     
     // Utiliser une classe spécifique pour cibler uniquement le formulaire Fluent Form
-    var inputRefPhoto = document.querySelector('.fluentform .ff-el-input'); 
+    var inputRefPhoto = document.querySelector('.fluentform .ff-el-form-control'); 
     if (inputRefPhoto) {
         inputRefPhoto.value = referenceValue;
     }
